@@ -47,8 +47,22 @@ form.tf{padding:2px 6px 5px 7px}
 .wa-bk-polysemy-otherlinks-head{margin-bottom: 4px;}
 .wa-bk-polysemy-otherlink{display: inline-block;margin-bottom: 4px;}
 </style>
+<script>
+	function displayTime() {
+		var date = new Date();
+		var year = date.getFullYear();
+		var month = ('0' + (date.getMonth() + 1)).slice(-2);
+		var day = ('0' + date.getDate()).slice(-2);
+		var hour = ('0' + date.getHours()).slice(-2);
+		var minute = ('0' + date.getMinutes()).slice(-2);
+		var second = ('0' + date.getSeconds()).slice(-2);
+
+		var formattedTime = year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second;
+		document.getElementById("valid-time").innerHTML = "验证时间：" + formattedTime;
+	}
+</script>
 </head>
-<body style="background-image:url(&#39;cciabg.png&#39;);background-size:50%;background-repeat:no-repeat;background-attachment:fixed;background-position:center;">
+<body style="background-image:url(&#39;cciabg.png&#39;);background-size:50%;background-repeat:no-repeat;background-attachment:fixed;background-position:center;" onload="displayTime()">
 <div class="wrap">
 	<div id="page-hd">
 		<div class="header" align="center">
@@ -65,7 +79,7 @@ form.tf{padding:2px 6px 5px 7px}
 					<div class="result_title_abs"><div class="wa-bk-polysemy-info"><span>小组名称：深耕者质量管理QC小组</span></div></div>
 					<div class="result_title_abs"><div class="wa-bk-polysemy-info"><span>小组成员：李 辉 陈春飞 夏冰山 张为龙 孙承瑞<br>杨海超 马 静 徐利辉 吴凯华 张 磊<br>李明兴 李亚树 </span></div></div>
 					<div class="result_title_abs"><div class="wa-bk-polysemy-info"><span>证书编号：A20214503</span></div></div>
-					<div class="result_title_abs"><div class="wa-bk-polysemy-info"><span>验证时间：2023-10-10 12:53:24</span></div></div>
+					<div class="result_title_abs"><div class="wa-bk-polysemy-info"><span id="valid-time">验证时间：2023-10-10 12:53:24</span></div></div>
 				</div>
 				<div class="resitem" tpl="bk_polysemy">
 					<div class="result_title_abs" style="text-align:center;font-size:18px;font-weight:700;line-height:2;">证书验证声明</div>
